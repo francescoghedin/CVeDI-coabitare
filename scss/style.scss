@@ -48,7 +48,26 @@ p{
 .btn-primary{
   background-color: $arancione;
   border-radius: 15px;
-  min-width: 200px;
+  width: 200px;
   color: white;
-  font-family:
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+.header-cont{
+  padding-left: 15%;
+  padding-right: 15%;
+  height:500px;
+}
+#header{
+  background-color: $grigio;
+  margin-bottom: 120px;
+}
+#storia1{
+  background-image: url(../immagini/homepage/irene.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+#storie h1{
+  margin-bottom: 70px !important;
 }

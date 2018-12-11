@@ -6355,5 +6355,25 @@ p {
 .btn-primary {
   background-color: #ff975a;
   border-radius: 15px;
-  min-width: 200px;
-  color: white; }
+  width: 200px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase; }
+
+.header-cont {
+  padding-left: 15%;
+  padding-right: 15%;
+  height: 500px; }
+
+#header {
+  background-color: #e8e6e6;
+  margin-bottom: 120px; }
+
+#storia1 {
+  background-image: url(../immagini/homepage/irene.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%; }
+
+#storie h1 {
+  margin-bottom: 70px !important; }
