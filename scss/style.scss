@@ -1,4 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700|Poppins:500,900');
+@import "../node_modules/bootstrap/scss/bootstrap";
 h1{
   color: yellow;
 }
-@import "../node_modules/bootstrap/scss/bootstrap";
+$arancione:#ff975a;
+$rosso: #a91124;
+$corallo: #ff776b;
+$blu: #373f51;
+$grigio: #e8e6e6;
+.navbar a{
+  color: $rosso;
+  text-transform: uppercase;
+  font-family: 'Fira Sans', sans-serif;
+}
+.navbar li{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.navbar a:hover{
+  color: $arancione;
+}
+.navbar-nav{
+  text-align: center;
+}
+.navbar img{
+  max-width: 80px;
+  max-height: 80px;
+}
+.header{
+  background: url("../immagini/homepage/header.jpg");
+  background-repeat:no-repeat;
+  background-size: contain;
+  min-height: 500px;
+  text-align: center;
+}
+h1{
+  color: $rosso;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+p{
+  color: $blu;
+  font-family: 'Fira Sans', sans-serif;
+
+}
+.btn-primary{
+  background-color: $arancione;
+  border-radius: 15px;
+  min-width: 200px;
+  color: white;
+  font-family:
+}
