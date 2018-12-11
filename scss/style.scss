@@ -7,7 +7,7 @@ $arancione:#ff975a;
 $rosso: #a91124;
 $corallo: #ff776b;
 $blu: #373f51;
-$grigio: #e8e6e6;
+$grigio: #e0dee3;
 .navbar a{
   color: $rosso;
   text-transform: uppercase;
@@ -52,7 +52,33 @@ p{
   color: white;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
+  box-shadow: 0 6px 0px -2px darken($arancione, 20%);
+  border: 0;
 }
+.btn-primary:focus{
+  border:none;
+  box-shadow: 0 6px 0px -2px darken($arancione, 20%);
+}
+
+.btn-primary:hover{
+  background-color: lighten($arancione, 5%);
+  box-shadow: 0 6px 0px -2px darken($arancione, 10%);
+}
+.btn-primary:active{
+  background-color: $corallo;
+  box-shadow: 0 6px 0px -2px darken($corallo, 10%);
+  border: none;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: $corallo;
+  box-shadow: 0 6px 0px -2px darken($corallo, 10%);
+  border-color: none; }
+  .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 6px 0px -2px darken($corallo, 10%);}
+
+
 .header-cont{
   padding-left: 15%;
   padding-right: 15%;
@@ -68,6 +94,6 @@ p{
   height: 100%;
   width: 100%;
 }
-#storie h1{
-  margin-bottom: 70px !important;
+.storia{
+  margin-top: 70px !important;
 }

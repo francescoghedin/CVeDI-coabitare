@@ -6358,7 +6358,32 @@ p {
   width: 200px;
   color: white;
   font-family: 'Poppins', sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  box-shadow: 0 6px 0px -2px #f35a00;
+  border: 0; }
+
+.btn-primary:focus {
+  border: none;
+  box-shadow: 0 6px 0px -2px #f35a00; }
+
+.btn-primary:hover {
+  background-color: #ffa774;
+  box-shadow: 0 6px 0px -2px #ff7727; }
+
+.btn-primary:active {
+  background-color: #ff776b;
+  box-shadow: 0 6px 0px -2px #ff4838;
+  border: none; }
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #ff776b;
+  box-shadow: 0 6px 0px -2px #ff4838;
+  border-color: none; }
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 6px 0px -2px #ff4838; }
 
 .header-cont {
   padding-left: 15%;
@@ -6366,7 +6391,7 @@ p {
   height: 500px; }
 
 #header {
-  background-color: #e8e6e6;
+  background-color: #e0dee3;
   margin-bottom: 120px; }
 
 #storia1 {
@@ -6375,5 +6400,5 @@ p {
   height: 100%;
   width: 100%; }
 
-#storie h1 {
-  margin-bottom: 70px !important; }
+.storia {
+  margin-top: 70px !important; }
