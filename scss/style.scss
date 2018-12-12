@@ -40,6 +40,11 @@ h1{
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
 }
+h2{
+  color: $corallo;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+}
 p{
   color: $blu;
   font-family: 'Fira Sans', sans-serif;
@@ -88,12 +93,27 @@ p{
   background-color: $grigio;
   margin-bottom: 120px;
 }
-#storia1{
+#irene{
   background-image: url(../immagini/homepage/irene.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+#eugenia{
+  background-image: url(../immagini/homepage/eugenia.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+#alessandra{
+  background-image: url(../immagini/homepage/mattia.jpg);
   background-size: cover;
   height: 100%;
   width: 100%;
 }
 .storia{
   margin-top: 70px !important;
+}
+.storia:last-child{
+  margin-bottom: 120px !important;
 }
