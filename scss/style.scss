@@ -131,9 +131,11 @@ a:hover{
     border-radius: 15px;
     border: 3px solid $rosso;
     height: 5rem;
+    min-width: 23rem;
     color: $rosso;
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-family: 'Fira sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
     text-transform: uppercase;
   }
   .btn-secondary:focus{
@@ -199,15 +201,79 @@ a:hover{
 .sezionegrigia{
   background-color: $grigio;
   padding-bottom: 3.5rem;
+  margin-bottom: 12rem;
 }
 .sezionegrigia h1{
-    // text-align: center;
-    padding-top: 12rem;
-    margin-bottom: 7rem;
+    padding-top: 7rem;
+    margin-bottom: 3.5rem;
 }
 .valori img{
   object-fit: cover;
   border-radius: 15px;
   max-height: 15rem;
   margin-bottom: 3.5rem;
+}
+// stili come partecipare
+.partecipa img{
+  object-fit: cover;
+  border-radius: 15px;
+  width: 100%;
+  max-height: 22rem;
+  margin-bottom: 3.5rem;
+}
+#comepartecipare{
+  margin-bottom: 12rem;
+}
+#comepartecipare .container{
+  margin-top: 7rem;
+}
+#comepartecipare p{
+  margin-bottom: 3.5rem;
+}
+// stili newsletter
+#newsletter form{
+  width: 100%;
+  height: 100%;
+}
+#inputnome{
+  height: 5rem;
+  border-radius: 15px 0 0 15px;
+}
+#inputmail{
+  height: 5rem;
+  border-radius: 0 15px 15px 0;
+}
+#newsletter .form-group{
+  //correzione allineamento ad-hoc per il box-shadow del bottone
+  margin-bottom: -2px;
+}
+#inputconsenso{
+  margin-left: 1.7rem;
+}
+label[for="inputconsenso"]{
+  margin-top: -3px;
+  margin-left: 3.5rem;
+  font-size: 1.8rem;
+  font-family: 'Fira Sans', sans-serif;
+}
+input[type=text], input[type=email]{
+  font-size: 1.8rem;
+  font-family: 'Fira Sans', sans-serif;
+}
+#inputnome::placeholder, #inputmail::placeholder{
+  font-size: 1.8rem;
+  font-family: 'Fira Sans', sans-serif;
+  opacity: 0.5;
+}
+#footer{
+  background: $blu;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+#footer p{
+  color: white;
+}
+#privacy{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
