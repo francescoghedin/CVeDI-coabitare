@@ -64,6 +64,12 @@ h2{
   font-weight: 400;
   font-size: 3rem;
 }
+h3{
+  color: $corallo;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+}
 p, blockquote{
   color: $blu;
   font-family: 'Fira Sans', sans-serif;
@@ -119,24 +125,54 @@ a:hover{
   .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 6px 0px -2px darken($corallo, 10%);}
 
+
+  .btn-secondary{
+    background-color: white;
+    border-radius: 15px;
+    border: 3px solid $rosso;
+    height: 5rem;
+    color: $rosso;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .btn-secondary:focus{
+    border: 3px solid $rosso;
+    box-shadow: none;
+  }
+
+  .btn-secondary:hover{
+    border: 3px solid $arancione;
+    color: $arancione;
+    background-color: white;
+  }
+  .btn-secondary:active{
+    border: 3px solid $blu;
+    color: $blu;
+    background-color: white;
+  }
+  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+  .show > .btn-secondary.dropdown-toggle {
+    border: none;
+    color: white;
+    background-color: $orange;
+    box-shadow: none; }
+    .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-secondary.dropdown-toggle:focus {
+      border: none;
+      color: white;
+      background-color: $orange;
+      box-shadow: none;
+    }
 // stili le nostre storie
-#irene{
-  background-image: url(../immagini/homepage/irene.jpg);
-}
-#eugenia{
-  background-image: url(../immagini/homepage/eugenia.jpg);
-}
-#alessandra{
-  background-image: url(../immagini/homepage/mattia.jpg);
-}
-.fotostoria{
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-}
 .storia{
   margin-top: 7rem;
+}
+.storia img{
+  object-fit: cover;
+  border-radius: 15px;
+  width: 100%;
+  height: 33rem;
 }
 .storia:last-child{
   margin-bottom: 12rem;
@@ -146,14 +182,32 @@ a:hover{
   font-style: italic;
   margin-top: 3rem;
 }
+//Aggiunge il simbolo di quote prima del blocco di testo e lo posiziona
 .citazione:before {
+  content: '\201C';
   font-family: 'Georgia';
   color: $rosso;
   display: inline-block;
   vertical-align: top;
   height: 3rem;
   margin-top: -3rem;
-  content: '\201C';
   margin-right: 10px;
   font-size: 6rem;
+}
+
+//Stili i nostri valori
+.sezionegrigia{
+  background-color: $grigio;
+  padding-bottom: 3.5rem;
+}
+.sezionegrigia h1{
+    // text-align: center;
+    padding-top: 12rem;
+    margin-bottom: 7rem;
+}
+.valori img{
+  object-fit: cover;
+  border-radius: 15px;
+  max-height: 15rem;
+  margin-bottom: 3.5rem;
 }
