@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700|Poppins:500,900');
 @import "../node_modules/bootstrap/scss/bootstrap";
-h1{
-  color: yellow;
+/*INIZIO CODICE PERSONALIZZATO COABITARE*/
+html{
+  font-size: 62.5%;
+  //RENDO 1REM = 10px PER FACILITARE I CALCOLI
+  line-height: 1.5;
 }
+//Definizione variabili scss
 $arancione:#ff975a;
 $rosso: #a91124;
 $corallo: #ff776b;
 $blu: #373f51;
 $grigio: #e0dee3;
+
+//Stili menu desktop
 .navbar a{
   color: $rosso;
   text-transform: uppercase;
   font-family: 'Fira Sans', sans-serif;
 }
 .navbar li{
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 .navbar a:hover{
   color: $arancione;
@@ -24,38 +30,68 @@ $grigio: #e0dee3;
   text-align: center;
 }
 .navbar img{
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 8rem;
+  max-height: 8rem;
 }
+//stili header
 .header{
   background: url("../immagini/homepage/header.jpg");
   background-repeat:no-repeat;
   background-size: contain;
-  min-height: 500px;
+  min-height: 50rem;
   text-align: center;
 }
+.header-cont{
+  padding-left: 15%;
+  padding-right: 15%;
+  height:50rem;
+}
+#header{
+  background-color: $grigio;
+  margin-bottom: 12rem;
+}
+// Stili testi
 h1{
   color: $rosso;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
+  font-size: 4rem;
 }
 h2{
   color: $corallo;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  font-size: 3rem;
 }
-p{
+p, blockquote{
   color: $blu;
   font-family: 'Fira Sans', sans-serif;
+  font-size: 1.8rem;
+
 
 }
+a{
+  color: $arancione;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+  font-size: 2rem;
+}
+a:hover{
+  color: $rosso;
+  text-decoration: none;
+
+}
+// stili bottoni
 .btn-primary{
   background-color: $arancione;
   border-radius: 15px;
-  width: 200px;
+  width: 20rem;
+  height: 5rem;
   color: white;
   font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
   text-transform: uppercase;
   box-shadow: 0 6px 0px -2px darken($arancione, 20%);
   border: 0;
@@ -83,37 +119,41 @@ p{
   .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 6px 0px -2px darken($corallo, 10%);}
 
-
-.header-cont{
-  padding-left: 15%;
-  padding-right: 15%;
-  height:500px;
-}
-#header{
-  background-color: $grigio;
-  margin-bottom: 120px;
-}
+// stili le nostre storie
 #irene{
   background-image: url(../immagini/homepage/irene.jpg);
-  background-size: cover;
-  height: 100%;
-  width: 100%;
 }
 #eugenia{
   background-image: url(../immagini/homepage/eugenia.jpg);
-  background-size: cover;
-  height: 100%;
-  width: 100%;
 }
 #alessandra{
   background-image: url(../immagini/homepage/mattia.jpg);
+}
+.fotostoria{
   background-size: cover;
   height: 100%;
   width: 100%;
+  border-radius: 15px;
 }
 .storia{
-  margin-top: 70px !important;
+  margin-top: 7rem;
 }
 .storia:last-child{
-  margin-bottom: 120px !important;
+  margin-bottom: 12rem;
+}
+.citazione{
+  font-family: 'Fira Sans', sans-serif;
+  font-style: italic;
+  margin-top: 3rem;
+}
+.citazione:before {
+  font-family: 'Georgia';
+  color: $rosso;
+  display: inline-block;
+  vertical-align: top;
+  height: 3rem;
+  margin-top: -3rem;
+  content: '\201C';
+  margin-right: 10px;
+  font-size: 6rem;
 }

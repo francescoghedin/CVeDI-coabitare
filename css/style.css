@@ -6313,8 +6313,10 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-h1 {
-  color: yellow; }
+/*INIZIO CODICE PERSONALIZZATO COABITARE*/
+html {
+  font-size: 62.5%;
+  line-height: 1.5; }
 
 .navbar a {
   color: #a91124;
@@ -6322,8 +6324,8 @@ h1 {
   font-family: 'Fira Sans', sans-serif; }
 
 .navbar li {
-  margin-left: 15px;
-  margin-right: 15px; }
+  margin-left: 1.5rem;
+  margin-right: 1.5rem; }
 
 .navbar a:hover {
   color: #ff975a; }
@@ -6332,37 +6334,62 @@ h1 {
   text-align: center; }
 
 .navbar img {
-  max-width: 80px;
-  max-height: 80px; }
+  max-width: 8rem;
+  max-height: 8rem; }
 
 .header {
   background: url("../immagini/homepage/header.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  min-height: 500px;
+  min-height: 50rem;
   text-align: center; }
+
+.header-cont {
+  padding-left: 15%;
+  padding-right: 15%;
+  height: 50rem; }
+
+#header {
+  background-color: #e0dee3;
+  margin-bottom: 12rem; }
 
 h1 {
   color: #a91124;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
-  font-weight: 900; }
+  font-weight: 900;
+  font-size: 4rem; }
 
 h2 {
   color: #ff776b;
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 400; }
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 3rem; }
 
-p {
+p, blockquote {
   color: #373f51;
-  font-family: 'Fira Sans', sans-serif; }
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.8rem; }
+
+a {
+  color: #ff975a;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+  font-size: 2rem; }
+
+a:hover {
+  color: #a91124;
+  text-decoration: none; }
 
 .btn-primary {
   background-color: #ff975a;
   border-radius: 15px;
-  width: 200px;
+  width: 20rem;
+  height: 5rem;
   color: white;
   font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
   text-transform: uppercase;
   box-shadow: 0 6px 0px -2px #f35a00;
   border: 0; }
@@ -6390,35 +6417,39 @@ p {
 .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 6px 0px -2px #ff4838; }
 
-.header-cont {
-  padding-left: 15%;
-  padding-right: 15%;
-  height: 500px; }
-
-#header {
-  background-color: #e0dee3;
-  margin-bottom: 120px; }
-
 #irene {
-  background-image: url(../immagini/homepage/irene.jpg);
-  background-size: cover;
-  height: 100%;
-  width: 100%; }
+  background-image: url(../immagini/homepage/irene.jpg); }
 
 #eugenia {
-  background-image: url(../immagini/homepage/eugenia.jpg);
-  background-size: cover;
-  height: 100%;
-  width: 100%; }
+  background-image: url(../immagini/homepage/eugenia.jpg); }
 
 #alessandra {
-  background-image: url(../immagini/homepage/mattia.jpg);
+  background-image: url(../immagini/homepage/mattia.jpg); }
+
+.fotostoria {
   background-size: cover;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  border-radius: 15px; }
 
 .storia {
-  margin-top: 70px !important; }
+  margin-top: 7rem; }
 
 .storia:last-child {
-  margin-bottom: 120px !important; }
+  margin-bottom: 12rem; }
+
+.citazione {
+  font-family: 'Fira Sans', sans-serif;
+  font-style: italic;
+  margin-top: 3rem; }
+
+.citazione:before {
+  font-family: 'Georgia';
+  color: #a91124;
+  display: inline-block;
+  vertical-align: top;
+  height: 3rem;
+  margin-top: -3rem;
+  content: '\201C';
+  margin-right: 10px;
+  font-size: 6rem; }
