@@ -6315,8 +6315,20 @@ a.text-dark:hover, a.text-dark:focus {
 
 /*INIZIO CODICE PERSONALIZZATO COABITARE*/
 html {
-  font-size: 62.5%;
+  font-size: 37.5%;
   line-height: 1.5; }
+  @media (min-width: 576px) {
+    html {
+      font-size: 37.5%; } }
+  @media (min-width: 768px) {
+    html {
+      font-size: 53%; } }
+  @media (min-width: 992px) {
+    html {
+      font-size: 62.5%; } }
+  @media (min-width: 1200px) {
+    html {
+      font-size: 62.5%; } }
 
 .navbar a {
   color: #a91124;
@@ -6337,21 +6349,34 @@ html {
   max-width: 8rem;
   max-height: 8rem; }
 
-.header {
+.navbar-toggler-icon {
+  width: 2.5em;
+  height: 2.5em;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(169,17,36)' stroke-width='5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+
+.header-img {
   background: url("../immagini/homepage/header.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  min-height: 50rem;
-  text-align: center; }
+  min-height: 50rem; }
 
 .header-cont {
   padding-left: 15%;
   padding-right: 15%;
-  height: 50rem; }
+  height: 50rem;
+  text-align: center; }
 
-#header {
+#header-lg {
   background-color: #e0dee3;
   margin-bottom: 12rem; }
+
+#header-sm {
+  margin-top: 7rem;
+  margin-bottom: 12rem; }
+
+#header-sm img {
+  height: 34.5rem;
+  width: 28rem; }
 
 h1 {
   color: #a91124;

@@ -2,9 +2,21 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 /*INIZIO CODICE PERSONALIZZATO COABITARE*/
 html{
-  font-size: 62.5%;
-  //RENDO 1REM = 10px PER FACILITARE I CALCOLI
+  font-size: 37.5%;
   line-height: 1.5;
+  @media (min-width: 576px){
+    font-size: 37.5%;
+  }
+  @media (min-width: 768px){
+    font-size: 53%;
+  }
+  @media (min-width: 992px){
+    font-size: 62.5%;
+    //RENDO 1REM = 10px PER FACILITARE I CALCOLI
+  }
+  @media (min-width: 1200px){
+    font-size: 62.5%;
+  }
 }
 //Definizione variabili scss
 $arancione:#ff975a;
@@ -13,7 +25,7 @@ $corallo: #ff776b;
 $blu: #373f51;
 $grigio: #e0dee3;
 
-//Stili menu desktop
+//Stili menu e toggler
 .navbar a{
   color: $rosso;
   text-transform: uppercase;
@@ -33,22 +45,37 @@ $grigio: #e0dee3;
   max-width: 8rem;
   max-height: 8rem;
 }
+.navbar-toggler-icon{
+  width: 2.5em;
+  height: 2.5em;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(169,17,36)' stroke-width='5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 //stili header
-.header{
+.header-img{
   background: url("../immagini/homepage/header.jpg");
   background-repeat:no-repeat;
   background-size: contain;
   min-height: 50rem;
-  text-align: center;
+
 }
 .header-cont{
   padding-left: 15%;
   padding-right: 15%;
   height:50rem;
+  text-align: center;
 }
-#header{
+#header-lg{
   background-color: $grigio;
   margin-bottom: 12rem;
+}
+#header-sm{
+  margin-top: 7rem;
+  margin-bottom: 12rem;
+}
+#header-sm img{
+  height: 34.5rem;
+  width: 28rem;
+
 }
 // Stili testi
 h1{
