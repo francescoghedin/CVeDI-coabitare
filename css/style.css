@@ -6315,20 +6315,20 @@ a.text-dark:hover, a.text-dark:focus {
 
 /*INIZIO CODICE PERSONALIZZATO COABITARE*/
 html {
-  font-size: 37.5%;
+  font-size: 62.5%;
   line-height: 1.5; }
   @media (min-width: 576px) {
     html {
-      font-size: 37.5%; } }
+      font-size: 62.5%; } }
   @media (min-width: 768px) {
     html {
-      font-size: 53%; } }
+      font-size: 78%; } }
   @media (min-width: 992px) {
     html {
-      font-size: 62.5%; } }
+      font-size: 82%; } }
   @media (min-width: 1200px) {
     html {
-      font-size: 62.5%; } }
+      font-size: 82%; } }
 
 .navbar a {
   color: #a91124;
@@ -6346,8 +6346,8 @@ html {
   text-align: center; }
 
 .navbar img {
-  max-width: 8rem;
-  max-height: 8rem; }
+  max-width: 4rem;
+  max-height: 4rem; }
 
 .navbar-toggler-icon {
   width: 2.5em;
@@ -6358,21 +6358,21 @@ html {
   background: url("../immagini/homepage/header.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  min-height: 50rem; }
+  min-height: 38rem; }
 
 .header-cont {
   padding-left: 15%;
   padding-right: 15%;
-  height: 50rem;
+  height: 38rem;
   text-align: center; }
 
 #header-lg {
   background-color: #e0dee3;
-  margin-bottom: 12rem; }
+  margin-bottom: 4rem; }
 
 #header-sm {
-  margin-top: 7rem;
-  margin-bottom: 12rem; }
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
 
 #header-sm img {
   height: 34.5rem;
@@ -6383,31 +6383,31 @@ h1 {
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  font-size: 4rem; }
+  font-size: 2.8rem; }
 
 h2 {
   color: #ff776b;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 3rem; }
+  font-size: 2.1rem; }
 
 h3 {
   color: #ff776b;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 2.1rem; }
+  font-size: 1.6rem; }
 
 p, blockquote {
   color: #373f51;
   font-family: 'Fira Sans', sans-serif;
-  font-size: 1.8rem; }
+  font-size: 1.2rem; }
 
 a {
   color: #ff975a;
   font-family: 'Fira Sans', sans-serif;
   font-weight: bold;
   transition: color 0.2s ease-in-out;
-  font-size: 2rem; }
+  font-size: 1.5rem; }
 
 a:hover {
   color: #a91124;
@@ -6416,11 +6416,11 @@ a:hover {
 .btn-primary {
   background-color: #ff975a;
   border-radius: 15px;
-  width: 20rem;
-  height: 5rem;
+  width: 15rem;
+  height: 3.5rem;
   color: white;
   font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   box-shadow: 0 6px 0px -2px #f35a00;
   border: 0; }
@@ -6452,11 +6452,11 @@ a:hover {
   background-color: white;
   border-radius: 15px;
   border: 3px solid #a91124;
-  height: 5rem;
-  min-width: 23rem;
+  height: 3.5rem;
+  min-width: 17rem;
   color: #a91124;
   font-family: 'Fira sans', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -6489,16 +6489,24 @@ a:hover {
   box-shadow: none; }
 
 .storia {
-  margin-top: 7rem; }
+  margin-top: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1rem solid #e0dee3; }
+  @media (min-width: 992px) {
+    .storia {
+      border: none; } }
+
+.storia:last-child {
+  border: none; }
 
 .storia img {
   object-fit: cover;
   border-radius: 15px;
   width: 100%;
-  height: 33rem; }
+  height: 21.5rem; }
 
 .storia:last-child {
-  margin-bottom: 12rem; }
+  margin-bottom: 4rem; }
 
 .citazione {
   font-family: 'Fira Sans', sans-serif;
@@ -6518,75 +6526,116 @@ a:hover {
 
 .sezionegrigia {
   background-color: #e0dee3;
-  padding-bottom: 3.5rem;
-  margin-bottom: 12rem; }
+  padding-bottom: 4rem;
+  margin-bottom: 4rem; }
 
 .sezionegrigia h1 {
-  padding-top: 7rem;
-  margin-bottom: 3.5rem; }
+  padding-top: 4rem;
+  margin-bottom: 1.5rem; }
 
 .valori img {
   object-fit: cover;
   border-radius: 15px;
-  max-height: 15rem;
-  margin-bottom: 3.5rem; }
+  height: 10rem;
+  min-width: 10rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem; }
+  @media (min-width: 992px) {
+    .valori img {
+      height: 11.3rem;
+      width: 100%;
+      margin-right: 0;
+      flex-shrink: 0; } }
+
+.partecipa {
+  position: relative;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem; }
 
 .partecipa img {
   object-fit: cover;
   border-radius: 15px;
   width: 100%;
-  max-height: 22rem;
-  margin-bottom: 3.5rem; }
+  max-height: 15rem;
+  margin-bottom: 1.5rem; }
 
-#comepartecipare {
-  margin-bottom: 12rem; }
+/*TO FIX*/
+.partecipa::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 1rem;
+  background: #e0dee3;
+  width: 150vw;
+  left: -50vw;
+  bottom: 0; }
+  @media (min-width: 992px) {
+    .partecipa::after {
+      display: none; } }
 
+.partecipa:last-child::after {
+  display: none; }
+
+/*END FIX*/
 #comepartecipare .container {
-  margin-top: 7rem; }
+  margin-top: 1.5rem; }
 
 #comepartecipare p {
-  margin-bottom: 3.5rem; }
+  margin-bottom: 1.5rem; }
 
 #newsletter form {
   width: 100%;
   height: 100%; }
 
 #inputnome {
-  height: 5rem;
-  border-radius: 15px 0 0 15px; }
+  height: 3.5rem;
+  border-radius: 15px; }
+  @media (min-width: 992px) {
+    #inputnome {
+      border-radius: 15px 0 0 15px; } }
 
 #inputmail {
-  height: 5rem;
-  border-radius: 0 15px 15px 0; }
+  height: 3.5rem;
+  border-radius: 15px; }
+  @media (min-width: 992px) {
+    #inputmail {
+      border-radius: 0 15px 15px 0; } }
 
 #newsletter .form-group {
-  margin-bottom: -2px; }
+  margin-bottom: 1.5rem; }
+  @media (min-width: 992px) {
+    #newsletter .form-group {
+      margin-bottom: -2px; } }
 
 #inputconsenso {
-  margin-left: 1.7rem; }
+  margin-left: 1.5rem; }
 
 label[for="inputconsenso"] {
   margin-top: -3px;
   margin-left: 3.5rem;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-family: 'Fira Sans', sans-serif; }
 
 input[type=text], input[type=email] {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-family: 'Fira Sans', sans-serif; }
 
 #inputnome::placeholder, #inputmail::placeholder {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-family: 'Fira Sans', sans-serif;
   opacity: 0.5; }
 
 #footer {
   background: #373f51;
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem; }
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+#footer h3 {
+  margin-bottom: 1.5rem; }
 
 #footer p {
-  color: white; }
+  color: white;
+  margin-bottom: 0px; }
 
 #privacy {
   padding-top: 1rem;

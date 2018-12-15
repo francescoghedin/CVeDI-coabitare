@@ -14,7 +14,7 @@
 <!-- INIZIO MENU -->
     <nav class="navbar navbar-fixed-top navbar-expand-lg">
       <div class="container">
-            <a class="navbar-brand" href="#"><img src="immagini/logo.png" alt="logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="immagini/logo.png" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -70,7 +70,7 @@
 <!-- FINE HEADER DESKTOP -->
 <!-- INIZIO HEADER MOBILE/TABLET-->
     <section id="header-sm" class="d-lg-none">
-          <div class="header-cont container d-flex flex-column justify-content-center align-items-center">
+          <div class="container d-flex flex-column justify-content-center align-items-center text-center">
             <h1>Un nuovo modo di vivere vecchio come il mondo</h1>
             <img src="immagini/homepage/headermobile_home.png" alt="foto polaroid">
             <p>Cohousing vuol dire vivere il condominio, il quartiere e la città.</p>
@@ -80,34 +80,38 @@
     </section>
 <!-- FINE HEADER MOBILE/TABLET -->
 
-<!-- INIZIO LE NOSTRE STORIE  -->
+
+<!-- INIZIO LE NOSTRE STORIE-->
 <!-- SECTION ORGANIZZATA VERTICALMENTE (FLEX-COLUMN) E CENTRATA ORIZZONTALMENTE  -->
     <section class="d-flex flex-column align-items-center">
       <h1>Le nostre storie</h1>
 <!-- OGNI STORIA VIENE ORGANIZZATA ORIZZONTALMENTE (FLEX-ROW) -->
-      <div class="storia container d-flex flex-row">
+      <div class="storia container d-flex flex-column flex-lg-row">
 <!-- IL CONTAINER VIENE DIVISO IN DUE DIV DI 6 COLONNE CIASCUNO -->
-          <div class="col-lg-6 fotostoria"><img src="immagini/homepage/irene.jpg" alt="Irene e Simone"></div>
-          <div class="col-lg-6">
-            <h2>Irene e Simone</h2>
+        <h2 class="d-lg-none col-sm-12">Irene e Simone</h2>
+        <div class="col-lg-6 col-sm-12 fotostoria"><img class="mb-5 mb-lg-0" src="immagini/homepage/irene.jpg" alt="Irene e Simone"></div>
+          <div class="col-lg-6 col-sm-12">
+            <h2 class="d-none d-lg-flex">Irene e Simone</h2>
             <p>Lei è un’appassionata ricercatrice, piena di idee e sempre in movimento, lui da qualche anno gestisce il suo negozio di biciclette. Insieme sognano di costruire una famiglia accogliente.</p>
             <blockquote class="citazione">Da quando abbiamo iniziato la nostra avventura nel primo cohousing di coabitare abbiamo riscoperto il valore della condivisione e dell’aiuto reciproco, mettendo a disposizione della comunità la nostra intraprendenza e creatività.</blockquote>
               <a href="numerozero.html">> Numero Zero</a>
           </div>
       </div>
-      <div class="storia container d-flex flex-row">
-          <div class="col-lg-6 fotostoria" id="eugenia"><img src="immagini/homepage/eugenia.jpg" alt="Eugenia"></div>
+      <div class="storia container d-flex flex-column flex-lg-row">
+        <h2 class="d-lg-none col-sm-12">Eugenia</h2>
+        <div class="col-lg-6 col-sm-12 fotostoria"><img class="mb-5 mb-lg-0" src="immagini/homepage/eugenia.jpg" alt="Eugenia"></div>
           <div class="col-lg-6">
-            <h2>Eugenia</h2>
+            <h2 class="d-none d-lg-flex">Eugenia</h2>
             <p>Urbanista di professione e sognatrice nel tempo libero. È una forte sostenitrice dell’ecologia e ama la natura in ogni sua forma. È sempre attenta ad evitare gli sprechi, nel rispetto del mondo che lasceremo in eredità alle generazioni future.</p>
             <blockquote class="citazione">Ho abbracciato con entusiasmo questa idea di cohousing e fin dal principio ho collaborato attivamente al progetto, mettendo sempre al centro la sostenibilità e il rispetto dell’ambiente.</blockquote>
             <a href="progettosole.html">> Progetto Sole</a>
           </div>
       </div>
-      <div class="storia container d-flex flex-row">
-          <div class="col-lg-6 fotostoria" id="alessandra"><img src="immagini/homepage/mattia.jpg" alt="Alessandra, Valentina e Mattia"></div>
+      <div class="storia container d-flex flex-column flex-lg-row">
+        <h2 class="d-lg-none col-sm-12">Alessandra, Valentina e Mattia</h2>
+        <div class="col-lg-6 col-sm-12 fotostoria"><img class="mb-5 mb-lg-0" src="immagini/homepage/mattia.jpg" alt="Alessandra, Valentina e Mattia"></div>
           <div class="col-lg-6">
-            <h2>Alessandra, Valentina e Mattia</h2>
+            <h2 class="d-none d-lg-flex">Alessandra, Valentina e Mattia</h2>
             <p>Lei è una mamma instancabile, professoressa di scuola media. Educare i ragazzi di oggi è la sua missione e da anni lavora con passione per la comunità locale di giovani. I suoi due figli riempiono il suo tempo libero con avventure sempre nuove.</p>
             <blockquote class="citazione">Ho proposto con gioia l’idea innovativa di una banca del tempo per Coabitare. Questa idea ha permesso a tutto il vicinato di mettere a disposizione le proprie abilità incentivando l’aiuto reciproco.</blockquote>
             <a href="numerozero.html">> Banca del Tempo</a>
@@ -115,38 +119,52 @@
       </div>
     </section>
 <!-- FINE LE NOSTRE STORIE -->
+
+
+
 <!-- INIZIO I NOSTRI VALORI -->
     <section class="sezionegrigia d-flex flex-column align-items-center">
       <h1>I nostri valori</h1>
-      <div class="container mb-5 d-flex justify-content-center">
-        <div class="valori col-lg-3 d-flex flex-column">
+      <div class="container mb-5 d-flex flex-column flex-lg-row justify-content-center">
+        <div class="valori col-12 col-lg-3 d-flex flex-row flex-lg-column">
           <img src="immagini/homepage/valori1.jpg" alt="sorgente">
-          <h3>Eco-sostenibilità</h3>
-          <p>Promuoviamo uno stile di vita a basso impatto ambientale nel pieno rispetto del territorio.</p>
+          <div>
+              <h3>Eco-sostenibilità</h3>
+              <p>Promuoviamo uno stile di vita a basso impatto ambientale nel pieno rispetto del territorio.</p>
+          </div>
         </div>
-        <div class="valori col-lg-3 d-flex flex-column">
+        <div class="valori col-12 col-lg-3 d-flex flex-row flex-lg-column">
           <img src="immagini/homepage/valori2.jpg" alt="borsa della spesa">
-          <h3>Riduzione degli sprechi</h3>
-          <p>Difendiamo il nostro pianeta attraverso la riduzione degli sprechi e un consumo energetico più consapevole.</p>
+          <div>
+            <h3>Riduzione degli sprechi</h3>
+            <p>Difendiamo il nostro pianeta attraverso la riduzione degli sprechi e un consumo energetico più consapevole.</p>
+          </div>
         </div>
-        <div class="valori col-lg-3 d-flex flex-column">
+        <div class="valori col-12 col-lg-3 d-flex flex-row flex-lg-column">
           <img src="immagini/homepage/valori3.jpg" alt="mani con fiore">
-          <h3>Condivisione</h3>
-          <p>Incoraggiamo l’aiuto in ogni aspetto del vivere comune, creando un ambiente cooperativo. </p>
+          <div>
+            <h3>Condivisione</h3>
+            <p>Incoraggiamo l’aiuto in ogni aspetto del vivere comune, creando un ambiente cooperativo. </p>
+          </div>
         </div>
-        <div class="valori col-lg-3 d-flex flex-column">
+        <div class="valori col-12 col-lg-3 d-flex flex-row flex-lg-column">
           <img src="immagini/homepage/valori4.jpg" alt="cuore con le mani">
-          <h3>Comunità</h3>
-          <p>Cerchiamo di creare un senso di identità comune in modo che gli abitanti di CoAbitare si sentano parte della comunità.</p>
+          <div>
+            <h3>Comunità</h3>
+            <p>Cerchiamo di creare un senso di identità comune in modo che gli abitanti di CoAbitare si sentano parte della comunità.</p>
+          </div>
         </div>
       </div>
       <button type="button" class="btn btn-secondary">Scarica il manifesto</button>
     </section>
 <!-- FINE I NOSTRI VALORI  -->
+
+
+
 <!-- INIZIO COME PARTECIPARE     -->
     <section class="d-flex flex-column align-items-center" id="comepartecipare">
       <h1>Come partecipare</h1>
-      <div class="container mb-5 d-flex justify-content-center">
+      <div class="container mb-5 d-flex flex-column flex-lg-row justify-content-center">
         <div class="partecipa col-lg-4 d-flex flex-column">
           <img src="immagini/homepage/partecipare1.jpg" alt="sorgente">
           <h2>Unisciti a noi</h2>
@@ -168,11 +186,13 @@
       </div>
     </section>
 <!-- FINE COME PARTECIPARE  -->
+
+
 <!-- INIZIO NEWSLETTER  -->
     <section class="sezionegrigia d-flex flex-column align-items-center" id="newsletter">
       <h1>Iscriviti alla newsletter</h1>
       <form>
-      <div class="container mb-5 d-flex justify-content-center align-items-end">
+      <div class="container mb-5 d-flex flex-column flex-lg-row justify-content-center align-items-end">
 
           <div class="form-group col-lg-4">
           <label for="inputnome"><h3>Nome e Cognome</h3></label>
@@ -182,7 +202,7 @@
           <label for="inputmail"><h3>Email</h3></label>
           <input type="email" class="form-control" id="inputmail" placeholder="mario.rossi@gmail.com">
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 text-center">
           <button type="submit" class="btn btn-primary">Invia</button>
         </div>
 
@@ -195,14 +215,17 @@
       </div>
       </form>
     </section>
+
+
+    <!-- INIZIO FOOTER -->
     <section class="container-fluid d-flex" id="footer">
-      <div class="container d-flex">
-        <div class="form-group col-lg-6">
+      <div class="container d-flex flex-column flex-lg-row">
+        <div class="col-lg-6 pb-5 pb-lg-0">
           <h3>Contatti</h3>
           <p>info@coabitare.org</p>
-          <p>telefono</p>
+          <p>Tel. 011 882481</p>
         </div>
-        <div class="form-group col-lg-6">
+        <div class="col-lg-6">
           <h3>Un nuovo modo di vivere vecchio come il mondo</h3>
           <p>CoAbitare - Associazione di promozione sociale</p>
           <p>Via Biella 41, Torino</p>
@@ -212,7 +235,7 @@
     </section>
     <section  class="container-fluid d-flex justify-content-center" id="privacy">
       © 2019 COABITARE - COOKIES PRIVACY POLICY | PRIVACY POLICY
-    </setion>
+    </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
