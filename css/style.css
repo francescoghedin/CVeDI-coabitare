@@ -6355,7 +6355,7 @@ html {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(169,17,36)' stroke-width='5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
 
 .header-img {
-  background: url("../immagini/homepage/header.jpg");
+  background: url("../immagini/homepage/header_home.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 38rem; }
@@ -6492,11 +6492,7 @@ a:hover {
 
 .storia {
   margin-top: 4rem;
-  padding-bottom: 3rem;
-  border-bottom: 1rem solid #e0dee3; }
-  @media (min-width: 992px) {
-    .storia {
-      border: none; } }
+  padding-bottom: 3rem; }
 
 .storia:last-child {
   border: none; }
@@ -6552,7 +6548,8 @@ a:hover {
 .partecipa {
   position: relative;
   padding-bottom: 3rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  color: green; }
 
 .partecipa img {
   object-fit: cover;
@@ -6562,18 +6559,15 @@ a:hover {
   margin-bottom: 1.5rem; }
 
 /*TO FIX*/
-.partecipa::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  height: 1rem;
-  background: #e0dee3;
-  width: 101vw;
-  left: -6vw;
-  bottom: 0;
-  overflow-x: hidden; }
+.partecipa::after, .storia::after {
+  content: '';
+  border-bottom: 1rem solid #e0dee3;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 4rem; }
   @media (min-width: 992px) {
-    .partecipa::after {
+    .partecipa::after, .storia::after {
       display: none; } }
 
 .partecipa:last-child::after {
@@ -6645,7 +6639,7 @@ input[type=text], input[type=email] {
   padding-bottom: 1rem; }
 
 .header-interno {
-  background: url("../immagini/homepage/header.jpg");
+  background: url("../immagini/unisciti/header_uniscitianoi.png");
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 26.6rem;
@@ -6660,7 +6654,7 @@ input[type=text], input[type=email] {
   width: 21.3rem; }
 
 .header-interno-cont {
-  height: 26.6rem;
+  height: 21.3rem;
   padding-left: 15%;
   padding-right: 15%;
   text-align: center; }

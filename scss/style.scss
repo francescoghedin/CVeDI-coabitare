@@ -52,7 +52,7 @@ $grigio: #e0dee3;
 }
 //stili header
 .header-img{
-  background: url("../immagini/homepage/header.jpg");
+  background: url("../immagini/homepage/header_home.jpg");
   background-repeat:no-repeat;
   background-size: contain;
   min-height: 38rem;
@@ -199,10 +199,10 @@ a:hover{
 .storia{
   margin-top: 4rem;
   padding-bottom: 3rem;
-  border-bottom: 1rem solid $grigio;
-  @media (min-width: 992px) {
-    border: none;
-  }
+  // border-bottom: 1rem solid $grigio;
+  // @media (min-width: 992px) {
+  //   border: none;
+  // }
 }
 .storia:last-child{
   border: none;
@@ -263,6 +263,7 @@ a:hover{
   position: relative;
   padding-bottom: 3rem;
   margin-bottom: 2rem;
+  color:green;
 }
 .partecipa img{
   object-fit: cover;
@@ -272,16 +273,14 @@ a:hover{
   margin-bottom: 1.5rem;
 }
 /*TO FIX*/
-.partecipa::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  height: 1rem;
-  background: $grigio;
-  width: 101vw;
-  left:-6vw;
-  bottom:0;
-  overflow-x: hidden;
+
+.partecipa::after, .storia::after {
+  content: '';
+  border-bottom: 1rem solid $grigio;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom:4rem;
   @media (min-width: 992px) {
     display: none;
   }
@@ -360,7 +359,7 @@ input[type=text], input[type=email]{
 
 //PAGINA UNISCITI A NOI
 .header-interno {
-  background: url("../immagini/homepage/header.jpg");
+  background: url("../immagini/unisciti/header_uniscitianoi.png");
   background-repeat:no-repeat;
   background-size: contain;
   min-height: 26.6rem;
@@ -375,7 +374,7 @@ input[type=text], input[type=email]{
   width: 21.3rem;
 }
 .header-interno-cont{
-  height: 26.6rem;
+  height: 21.3rem;
 
   padding-left: 15%;
   padding-right: 15%;
