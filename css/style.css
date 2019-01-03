@@ -6491,10 +6491,9 @@ a:hover {
   box-shadow: none; }
 
 .storia {
-  margin-top: 4rem;
-  padding-bottom: 3rem; }
+  margin-top: 4rem; }
 
-.storia:last-child {
+.storia:last-child::after {
   border: none; }
 
 .storia img {
@@ -6535,7 +6534,7 @@ a:hover {
   object-fit: cover;
   border-radius: 15px;
   height: 10rem;
-  min-width: 10rem;
+  width: 10rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem; }
   @media (min-width: 992px) {
@@ -6547,9 +6546,7 @@ a:hover {
 
 .partecipa {
   position: relative;
-  padding-bottom: 3rem;
-  margin-bottom: 2rem;
-  color: green; }
+  padding-bottom: 2rem; }
 
 .partecipa img {
   object-fit: cover;
@@ -6561,11 +6558,11 @@ a:hover {
 /*TO FIX*/
 .partecipa::after, .storia::after {
   content: '';
-  border-bottom: 1rem solid #e0dee3;
-  width: 80%;
+  border-bottom: 0.5rem solid #e0dee3;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 4rem; }
+  padding-bottom: 2rem; }
   @media (min-width: 992px) {
     .partecipa::after, .storia::after {
       display: none; } }
