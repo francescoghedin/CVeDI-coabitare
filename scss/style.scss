@@ -56,25 +56,25 @@ html{
 }
 
 .m-top-l{
-  margin-top: 4rem !important;
+  margin-top: 5rem !important;
 }
 .m-bottom-l{
-  margin-bottom: 4rem !important;
+  margin-bottom: 5rem !important;
 }
 .m-tb-l{
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
 }
 
 .p-top-l{
-  padding-top: 4rem !important;
+  padding-top: 5rem !important;
 }
 .p-bottom-l{
-  padding-bottom: 4rem !important;
+  padding-bottom: 5rem !important;
 }
 .p-tb-l{
-  padding-bottom: 2rem !important;
-  padding-top: 2rem !important;
+  padding-bottom: 2.5rem !important;
+  padding-top: 2.5rem !important;
 }
 //Definisco variabili scss
 $arancione:#ff975a;
@@ -412,7 +412,7 @@ input[type=text], input[type=email]{
   margin-bottom: 4rem;
 }
 .elenco {
-  color: #373f51;
+  color: $blu;
   font-family: 'Fira Sans', sans-serif;
   font-size: 1.2rem;
 }
@@ -471,4 +471,7 @@ input[type=text], input[type=email]{
 }
 .riga-lista:last-child .cerchio::after{
   border: none;
+}
+.side-img{
+  max-width:22.5rem;
 }
