@@ -6427,6 +6427,12 @@ html {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem; }
 
+a h1, a h2, a h3 {
+  color: #ff975a; }
+
+a h1:hover, a h2:hover, a h3:hover {
+  color: #a91124; }
+
 h1 {
   color: #a91124;
   text-transform: uppercase;
@@ -6741,3 +6747,161 @@ input[type=text], input[type=email] {
 
 .side-img {
   max-width: 22.5rem; }
+
+.evento-principale {
+  border-radius: 15px;
+  background-color: #e0dee3;
+  height: 400px; }
+
+.evento-principale img {
+  height: 50%;
+  object-fit: contain;
+  border-radius: 15px 15px 0 0; }
+
+.evento-principale .tag {
+  border: 1px solid #373f51; }
+
+.evento-principale .corpo-cal {
+  background-color: white; }
+
+#evento-contenuto {
+  height: 50%; }
+
+.tag {
+  padding: 5px;
+  background: #e0dee3; }
+
+.tag:hover a, .tag:hover {
+  color: #fd7e14 !important;
+  background-color: #373f51; }
+
+.header-cal {
+  background: #a91124;
+  color: white;
+  border-radius: 15px 15px 0 0;
+  height: 2.8rem;
+  font-size: 2.5rem;
+  text-transform: uppercase; }
+
+.corpo-cal {
+  border-radius: 0 0 15px 15px;
+  color: #373f51;
+  flex-shrink: 0; }
+
+.corpo-cal span:first-child {
+  font-size: 3.4rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.8rem; }
+
+.cal {
+  height: 8.2rem;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 15px;
+  border: 1px solid #373f51; }
+
+.ora {
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.1rem;
+  color: #a91124; }
+
+.calendar {
+  width: 30.2rem;
+  padding: 5px;
+  border: 1px solid #e0dee3;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #373f51; }
+  .calendar--nav {
+    margin: -10px -15px 5px;
+    background-color: #a91124;
+    color: #fff;
+    height: 4.5rem;
+    position: relative; }
+    .calendar--nav a {
+      position: absolute;
+      cursor: pointer;
+      left: 10px;
+      font-size: 32px;
+      line-height: 1;
+      top: 16px;
+      width: 30px;
+      text-align: center;
+      display: inline-block;
+      color: rgba(255, 255, 255, 0.4);
+      user-select: none; }
+      .calendar--nav a:hover {
+        color: #fff; }
+      .calendar--nav a:last-child {
+        left: auto;
+        right: 10px; }
+    .calendar--nav h1 {
+      color: white;
+      margin: 0;
+      position: absolute;
+      left: 40px;
+      right: 40px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 66px;
+      user-select: none; }
+    .calendar--nav small {
+      font-weight: 300;
+      font-size: 60%; }
+  .calendar--days {
+    font-size: 0; }
+    .calendar--days span {
+      width: 14.28571%;
+      display: inline-block;
+      text-align: center;
+      user-select: none;
+      cursor: pointer;
+      margin: 1px 0;
+      line-height: 34px;
+      position: relative;
+      font-size: 16px; }
+      .calendar--days span.label {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 14px;
+        cursor: initial; }
+      .calendar--days span.active {
+        font-weight: 700;
+        color: #a91124;
+        background-color: rgba(169, 17, 36, 0.05);
+        border-radius: 15px; }
+      .calendar--days span.muted {
+        color: rgba(0, 0, 0, 0.3); }
+      .calendar--days span.between {
+        border-radius: 0; }
+      .calendar--days span.start, .calendar--days span.between, .calendar--days span.end {
+        background-color: #ff776b;
+        color: #fff; }
+      .calendar--days span.start {
+        border-radius: 15px 0 0 15px; }
+      .calendar--days span.end {
+        border-radius: 0 15px 15px 0; }
+      .calendar--days span.start.end {
+        border-radius: 15px; }
+      .calendar--days span.between:nth-child(7n):after, .calendar--days span.start:nth-child(7n):after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        background-color: #ff776b;
+        width: 20px; }
+      .calendar--days span.between:nth-child(7n + 1):after, .calendar--days span.end:nth-child(7n + 1):after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        background-color: #ff776b;
+        width: 20px; }
+      .calendar--days span.start.end:after {
+        display: none; }
