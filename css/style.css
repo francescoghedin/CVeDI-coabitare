@@ -6769,11 +6769,17 @@ input[type=text], input[type=email] {
 
 .tag {
   padding: 5px;
+  margin-right: 5px;
   background: #e0dee3; }
+  .tag a, .tag a:hover {
+    color: #ff975a; }
 
-.tag:hover a, .tag:hover {
-  color: #fd7e14 !important;
+.tag:hover, .active {
   background-color: #373f51; }
+
+#tag-filter .tag {
+  margin: 0.5rem;
+  display: inline-block; }
 
 .header-cal {
   background: #a91124;
@@ -6805,6 +6811,9 @@ input[type=text], input[type=email] {
   font-family: 'Poppins', sans-serif;
   font-size: 2.1rem;
   color: #a91124; }
+
+.filter-panel .btn:first-child {
+  margin-bottom: 1rem; }
 
 .calendar {
   width: 30.2rem;

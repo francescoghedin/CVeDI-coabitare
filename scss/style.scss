@@ -502,13 +502,23 @@ input[type=text], input[type=email]{
 #evento-contenuto{
   height: 50%;
 }
-.tag{
+.tag {
   padding: 5px;
+  margin-right: 5px;
   background: $grigio;
+
+  a, a:hover {
+    color: $arancione;
+  }
 }
-.tag:hover a, .tag:hover{
-  color: $orange !important;
+
+.tag:hover, .active{
   background-color: $blu;
+}
+
+#tag-filter .tag{
+  margin: 0.5rem;
+  display: inline-block;
 }
 .header-cal{
   background: $rosso;
@@ -540,6 +550,9 @@ input[type=text], input[type=email]{
   font-family: 'Poppins', sans-serif;
   font-size: 2.1rem;
   color: $rosso;
+}
+.filter-panel .btn:first-child{
+  margin-bottom: 1rem;
 }
 //calendario
 .calendar {

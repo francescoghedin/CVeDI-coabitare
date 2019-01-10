@@ -71,7 +71,7 @@
 <!-- fine header -->
     <section class="d-flex p-tb-l">
       <div class="container d-flex">
-        <div class="col-12 col-lg-7 d-flex flex-column">
+        <div id="lista-eventi" class="col-12 col-lg-7 d-flex flex-column ">
           <div id="prossimo-evento p-top-l">
             <h1>Il prossimo evento</h1>
             <p class="m-top-s">I nostri incontri sono un momento di confronto, ascolto e discussione su tematiche
@@ -83,42 +83,14 @@
             <div class="evento-principale m-top-l">
               <img class="d-none d-lg-block" src="immagini/vieni/immagine.jpg" alt="immagine evento the">
               <div id="evento-contenuto" class="d-flex align-items-center">
-                <div class="col-2 d-flex flex-column justify-content-center">
-                  <div class="cal">
-                    <div class="header-cal d-flex align-items-center justify-content-center"><span>DIC</span></div>
-                    <div class="corpo-cal d-flex flex-column align-items-center justify-content-center"><span>9</span>
-                    <span>Domenica</span></div>
-                  </div>
-                  <span class="text-center ora">19:00</span>
-                </div>
-                <div class="col-10">
-                  <a href="#"><h2>Chiacchere da bar</h2></a>
-                  <h3>Via Baltea 3, Torino</h3>
-                  <p>Un incontro conviviale per discutere liberamente sui diversi modi di abitare in città, come consumare meno energia, tempo libero e lavoro.</p>
-                  <span class="tag"><a href="#">Cohousing</a></span>
-                </div>
+
               </div>
             </div>
           </div>
 
           <div id="eventi" class=" m-top-l">
             <h1>Eventi in programma</h1>
-            <!-- <div class="d-flex align-items-center m-top-l">
-              <div class="col-2 d-flex flex-column justify-content-center">
-                <div class="cal">
-                  <div class="header-cal d-flex align-items-center justify-content-center"><span>DIC</span></div>
-                  <div class="corpo-cal d-flex flex-column align-items-center justify-content-center"><span>9</span>
-                  <span>Domenica</span></div>
-                </div>
-                <span class="text-center ora">19:00</span>
-              </div>
-              <div class="col-10">
-                <a href="#"><h2>Chiacchere da bar</h2></a>
-                <h3>Via Baltea 3, Torino</h3>
-                <p>Un incontro conviviale per discutere liberamente sui diversi modi di abitare in città, come consumare meno energia, tempo libero e lavoro.</p>
-                <span class="tag"><a href="#">Cohousing</a></span>
-              </div>
-            </div> -->
+          
           </div>
         </div>
 
@@ -126,7 +98,13 @@
           <div class="d-lg-flex col-12 col-lg-10 flex-column">
             <h2>Filtra gli eventi</h2>
             <div id="calendar" class="m-top-s"></div>
-            <div id="tag-filter" class="m-top-s"></div>
+            <div id="tag-filter" class="m-top-s">
+
+            </div>
+            <div class="filter-panel d-flex flex-column justify-content-center m-top-s">
+              <button id="filter" type="button" class="btn btn-secondary mx-auto">Applica i filtri</button>
+              <button id="filter-cancel" type="button" class="btn btn-secondary mx-auto">Resetta i filtri</button>
+            </div>
             <h2 class="m-top-l">Cosa ti sei perso</h2>
             <div class="m-top-s">
               <a href="#"><h3>Social Housing</h3></a>

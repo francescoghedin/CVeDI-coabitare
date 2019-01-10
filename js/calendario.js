@@ -1,4 +1,3 @@
-'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -146,8 +145,8 @@ var Calendar = function (_React$Component) {
 
     _this.state = {
       date: moment(),
-      startDate: moment(),
-      endDate: moment()
+      startDate: null,
+      endDate:null
     };
     return _this;
   }
@@ -212,4 +211,4 @@ var Calendar = function (_React$Component) {
   return Calendar;
 }(React.Component);
 
-ReactDOM.render(React.createElement(Calendar, null), document.getElementById('calendar'));
+eventCalendar = ReactDOM.render(React.createElement(Calendar, null), document.getElementById('calendar'));
