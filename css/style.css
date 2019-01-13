@@ -6789,10 +6789,10 @@ input[type=text], input[type=email] {
   padding: 5px; }
 
 .tag:hover {
-  background-color: #4c576f; }
+  background-color: #373f51; }
 
 .active {
-  background-color: #373f51; }
+  background-color: #4c576f; }
 
 .tag-filter .tag {
   margin: 0.5rem;

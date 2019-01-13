@@ -3,7 +3,7 @@ const data = [{
   place: "Via baltea 3, Torino",
   date: "2019-01-29T19:00",
   content: "Un incontro conviviale per discutere liberamente sui diversi modi di abitare in città, come consumare meno energia, tempo libero e lavoro.",
-  tags: ["Cohousing", "Chiacchere"]
+  tags: ["Cohousing", "Chiacchiere"]
 },
 {
   title: "Cohousing \"Spazio Verde\"",
@@ -148,10 +148,20 @@ const printTagItem = (tag) => {
 
 const filterList = (list, filters) => {
   const [startDate, endDate] = filters.date;
-  const matchesFilterDates = (date) => startDate && endDate ? moment(date).isBetween(startDate, endDate) : true
+
+  startDate.hour(1);
+  startDate.minute(0);
+  startDate.second(0);
+  startDate.millisecond(0);
+  endDate.hour(23);
+  endDate.minute(59);
+  endDate.second(59);
+  endDate.millisecond(999);
+    console.log(startDate, endDate );
+  const matchesFilterDates = (date) => startDate && endDate ? moment(date).isBetween(startDate, endDate, null, '[]') : true
   const matchesFilterTags =(item) => item.tags.some(articleTag => filters.tags.includes(articleTag))
 
-  return list.filter(item => matchesFilterTags(item)  && matchesFilterDates(item.date))
+  return list.filter(item => matchesFilterTags(item)  || matchesFilterDates(item.date))
 }
 
 const printTagList = (list, element) => {
@@ -193,6 +203,7 @@ filterButtons[0].addEventListener('click', () => {
   const { startDate, endDate } = eventCalendarM.state;
 
   filter.date = [startDate, endDate];
+
   const filteredList = filterList(data, filter);
   nextEvent.classList.add('invisibile');
   articlesContainer.innerHTML=`
@@ -203,7 +214,9 @@ filterButtons[0].addEventListener('click', () => {
 filterButtons[1].addEventListener('click', () => {
   const { startDate, endDate } = eventCalendarD.state;
   filter.date = [startDate, endDate];
+
   const filteredList = filterList(data, filter);
+  console.log(filteredList);
   nextEvent.classList.add('invisibile');
   articlesContainer.classList.remove('m-top-l');
   articlesContainer.innerHTML=`

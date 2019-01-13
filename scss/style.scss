@@ -527,10 +527,10 @@ input[type=text], input[type=email]{
   padding: 5px;
 }
 .tag:hover{
-  background-color: lighten($blu, 10%);
+  background-color: $blu;
 }
 .active{
-  background-color: $blu;
+  background-color: lighten($blu, 10%);;
 }
 
 .tag-filter .tag{
