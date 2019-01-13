@@ -72,7 +72,7 @@
     <section class="d-flex p-tb-l">
       <div class="container d-flex">
         <div id="lista-eventi" class="col-12 col-lg-7 d-flex flex-column ">
-          <div id="prossimo-evento p-top-l">
+          <div id="prossimo-evento">
             <h1>Il prossimo evento</h1>
             <p class="m-top-s">I nostri incontri sono un momento di confronto, ascolto e discussione su tematiche
               e proposte di Cohousing.</p>
@@ -80,10 +80,19 @@
               sull’argomento, sei il benvenuto!</p>
             <p>Non perderti il nostro prossimo incontro, sarà l’occasione giusta anche per
               conoscersi! </p>
-            <div class="evento-principale m-top-l">
-              <img class="d-none d-lg-block" src="immagini/vieni/immagine.jpg" alt="immagine evento the">
-              <div id="evento-contenuto" class="d-flex align-items-center">
 
+          </div>
+
+          <div id="accordion-mobile" class="d-block d-lg-none m-top-l">
+              <a data-toggle="collapse" href="#filtri-mobile" role="button" aria-expanded="false" aria-controls="filtri-mobile" class="d-flex justify-content-around">
+                <h2>Filtra gli eventi</h2><h2 class="fondo">></h2>
+              </a>
+            <div class="collapse" id="filtri-mobile">
+              <div class="card d-flex align-items-center">
+                <div class="m-top-s filtro-calendar"></div>
+                <div class="m-top-s tag-filter"></div>
+                <button type="button" class="filter btn btn-secondary mx-auto m-tb-s">Applica i filtri</button>
+                <button type="button" class=" filter-cancel btn btn-secondary mx-auto">Resetta i filtri</button>
               </div>
             </div>
           </div>
@@ -92,18 +101,34 @@
             <h1>Eventi in programma</h1>
 
           </div>
-        </div>
 
+          <div class="d-flex d-lg-none flex-column">
+            <h2 class="m-top-l">Cosa ti sei perso</h2>
+            <div class="m-top-s">
+              <a href="#"><h3>Social Housing</h3></a>
+              <p>Riflettiamo insieme sulla necessità di avere case a un prezzo e accessibile a tutti. </p>
+            </div>
+            <div>
+              <a href="#"><h3>Un condominio per amico</h3></a>
+              <p>Presentazione dei valori, dei progetti e dell’attività dell’Associazione Coabitare.</p>
+            </div>
+            <div>
+              <a href="#"><h3>Workshop Bio Orto</h3></a>
+              <p>Impariamo a coltivare consapevolmente per avere cibi sani e sostenibili per l’ambiente.</p>
+            </div>
+            <a href="#" class="m-top-s"> &gt; Leggi tutti gli eventi passati</a>
+          </div>
+        </div>
         <div class="d-none d-lg-flex col-lg-5 justify-content-end">
           <div class="d-lg-flex col-12 col-lg-10 flex-column">
             <h2>Filtra gli eventi</h2>
-            <div id="calendar" class="m-top-s"></div>
-            <div id="tag-filter" class="m-top-s">
+            <div class="m-top-s filtro-calendar"></div>
+            <div class="m-top-s tag-filter">
 
             </div>
             <div class="filter-panel d-flex flex-column justify-content-center m-top-s">
-              <button id="filter" type="button" class="btn btn-secondary mx-auto">Applica i filtri</button>
-              <button id="filter-cancel" type="button" class="btn btn-secondary mx-auto">Resetta i filtri</button>
+              <button type="button" class="filter btn btn-secondary mx-auto">Applica i filtri</button>
+              <button type="button" class=" filter-cancel btn btn-secondary mx-auto">Resetta i filtri</button>
             </div>
             <h2 class="m-top-l">Cosa ti sei perso</h2>
             <div class="m-top-s">

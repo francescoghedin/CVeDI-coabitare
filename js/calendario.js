@@ -210,5 +210,7 @@ var Calendar = function (_React$Component) {
 
   return Calendar;
 }(React.Component);
-
-eventCalendar = ReactDOM.render(React.createElement(Calendar, null), document.getElementById('calendar'));
+var mobile, desktop, scarto;
+[mobile, desktop, ...scarto] =  document.getElementsByClassName('filtro-calendar');
+eventCalendarD = ReactDOM.render(React.createElement(Calendar, null), desktop);
+eventCalendarM = ReactDOM.render(React.createElement(Calendar, null), mobile);

@@ -6324,7 +6324,7 @@ html {
       font-size: 78%; } }
   @media (min-width: 992px) {
     html {
-      font-size: 82%; } }
+      font-size: 62.5%; } }
   @media (min-width: 1200px) {
     html {
       font-size: 82%; } }
@@ -6757,33 +6757,44 @@ input[type=text], input[type=email] {
 .evento-principale {
   border-radius: 15px;
   background-color: #e0dee3;
-  height: 400px; }
+  height: 31rem; }
 
 .evento-principale img {
-  height: 50%;
+  width: 100%;
   object-fit: contain;
   border-radius: 15px 15px 0 0; }
 
 .evento-principale .tag {
   border: 1px solid #373f51; }
 
-.evento-principale .corpo-cal {
-  background-color: white; }
+#contenuto-principale .corpo-cal {
+  background-color: white !important; }
 
-#evento-contenuto {
-  height: 50%; }
+#contenuto-principale {
+  height: 50%;
+  border-radius: 15px; }
 
 .tag {
-  padding: 5px;
+  padding: 0.7rem;
   margin-right: 5px;
-  background: #e0dee3; }
+  background: #e0dee3;
+  border-radius: 15px; }
   .tag a, .tag a:hover {
     color: #ff975a; }
 
-.tag:hover, .active {
+#accordion-mobile {
+  background-color: white;
+  border: 1px solid #373f51;
+  border-radius: 15px;
+  padding: 5px; }
+
+.tag:hover {
+  background-color: #4c576f; }
+
+.active {
   background-color: #373f51; }
 
-#tag-filter .tag {
+.tag-filter .tag {
   margin: 0.5rem;
   display: inline-block; }
 
@@ -6807,10 +6818,17 @@ input[type=text], input[type=email] {
 
 .cal {
   height: 8.2rem;
+  width: 6.5rem;
   font-weight: 900;
   font-family: 'Poppins', sans-serif;
   border-radius: 15px;
   border: 1px solid #373f51; }
+
+.cal-mobile {
+  width: 100%; }
+
+.cal-mobile .cal {
+  height: 6.8rem; }
 
 .ora {
   font-weight: 400;
@@ -6818,21 +6836,35 @@ input[type=text], input[type=email] {
   font-size: 2.1rem;
   color: #a91124; }
 
+.cal-mobile .ora {
+  font-size: 1.6rem; }
+
 .filter-panel .btn:first-child {
   margin-bottom: 1rem; }
 
+.invisibile {
+  display: none; }
+
+.card {
+  border: none; }
+
 .calendar {
-  width: 30.2rem;
-  padding: 5px;
+  width: 24.8rem;
   border: 1px solid #e0dee3;
   border-radius: 15px;
   overflow: hidden;
   color: #373f51; }
+  @media (min-width: 992px) {
+    .calendar {
+      width: 30.2rem;
+      padding: 5px; } }
+  .calendar .fondo {
+    float: right; }
   .calendar--nav {
     margin: -10px -15px 5px;
     background-color: #a91124;
     color: #fff;
-    height: 4.5rem;
+    height: 5rem;
     position: relative; }
     .calendar--nav a {
       position: absolute;

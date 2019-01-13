@@ -1,7 +1,7 @@
 const data = [{
   title: "Chiacchere da bar",
   place: "Via baltea 3, Torino",
-  date: "2019-01-27T19:00",
+  date: "2019-01-29T19:00",
   content: "Un incontro conviviale per discutere liberamente sui diversi modi di abitare in città, come consumare meno energia, tempo libero e lavoro.",
   tags: ["Cohousing", "Chiacchere"]
 },
@@ -39,29 +39,59 @@ let filter = { tags: [], date: [] };
 const printMainArticle = (item, element) => {
   const date = new Date(item.date)
   const code = `
-  <div class="col-2 d-flex flex-column justify-content-center">
-      <div class="cal">
-        <div class="header-cal d-flex align-items-center justify-content-center"><span>${new Intl.DateTimeFormat('it-IT', {month: 'short'}).format(date)}</span></div>
-        <div class="corpo-cal d-flex flex-column align-items-center justify-content-center"><span>${new Intl.DateTimeFormat('it-IT', {day: 'numeric'}).format(date)}</span>
-        <span>${new Intl.DateTimeFormat('it-IT', {weekday: 'long'}).format(date)}</span></div>
+  <div id="evento-contenuto" class="evento-principale m-top-l d-none d-md-block">
+      <img src="immagini/vieni/immagine.jpg" alt="immagine evento tè">
+      <div id="contenuto-principale" class="d-flex align-items-center">
+        <div class="col-2 d-flex flex-column justify-content-center">
+            <div class="cal">
+              <div class="header-cal d-flex align-items-center justify-content-center"><span>${new Intl.DateTimeFormat('it-IT', {month: 'short'}).format(date)}</span></div>
+              <div class="corpo-cal d-flex flex-column align-items-center justify-content-center"><span>${new Intl.DateTimeFormat('it-IT', {day: 'numeric'}).format(date)}</span>
+              <span>${new Intl.DateTimeFormat('it-IT', {weekday: 'long'}).format(date)}</span></div>
+            </div>
+            <span class="text-center ora">${new Intl.DateTimeFormat('it-IT', {hour: '2-digit', minute: '2-digit'}).format(date)}</span>
+          </div>
+          <div class="col-10">
+            <a href="#"><h2>${item.title}</h2></a>
+            <h3>${item.place}</h3>
+            <p>${item.content}</p>
+            <div class="tag-list">${item.tags.map(printTagArticle).join('')}</div>
+          </div>
+        </div>
       </div>
-      <span class="text-center ora">${new Intl.DateTimeFormat('it-IT', {hour: '2-digit', minute: '2-digit'}).format(date)}</span>
     </div>
-    <div class="col-10">
-      <a href="#"><h2>${item.title}</h2></a>
-      <h3>${item.place}</h3>
-      <p>${item.content}</p>
-      <div class="tag-list">${item.tags.map(printTagArticle).join('')}</div>
+
+  <div class="d-inline d-md-none m-top-l">
+    <div id="contenuto-principale" class="d-flex align-items-center sezionegrigia p-tb-s">
+    <div class="d-flex d-lg-none flex-column align-items-center ">
+     <div class="d-flex">
+      <div class=" d-flex flex-column align-items-center cal-mobile">
+        <div class="cal">
+          <div class="header-cal d-flex align-items-center justify-content-center"><span>${new Intl.DateTimeFormat('it-IT', {month: 'short'}).format(date)}</span></div>
+          <div class="corpo-cal d-flex flex-column align-items-center justify-content-center"><span>${new Intl.DateTimeFormat('it-IT', {day: 'numeric'}).format(date)}</span>
+          </div>
+        </div>
+        <span class="text-center ora">${new Intl.DateTimeFormat('it-IT', {hour: '2-digit', minute: '2-digit'}).format(date)}</span>
+      </div>
+      <div class="col-9">
+        <a href="#"><h2>${item.title}</h2></a>
+        <h3>${item.place}</h3>
+      </div>
+     </div>
+     <div class="d-flex flex-column col-12">
+       <p>${item.content}</p>
+       <div class="tag-list">${item.tags.map(printTagArticle).join('')}</div>
+     </div>
+    </div>
     </div>
   </div>`
-  element.innerHTML= code;
+  element.insertAdjacentHTML('beforeend', code);
 }
 
 const printListHTML = (list, element) => {
   const articles = list.map((item) => {
   const date = new Date(item.date)
    return `
-   <div class="d-flex align-items-center m-top-l">
+   <div class="d-none d-md-flex align-items-center m-top-l">
      <div class="col-2 d-flex flex-column justify-content-center">
        <div class="cal">
          <div class="header-cal d-flex align-items-center justify-content-center"><span>${new Intl.DateTimeFormat('it-IT', {month: 'short'}).format(date)}</span></div>
@@ -76,7 +106,28 @@ const printListHTML = (list, element) => {
        <p>${item.content}</p>
        <div class="tag-list">${item.tags.map(printTagArticle).join('')}</div>
      </div>
-   </div>`
+   </div>
+
+   <div class="d-flex d-md-none flex-column m-top-l">
+    <div class="d-flex">
+     <div class=" d-flex flex-column align-items-center cal-mobile">
+       <div class="cal">
+         <div class="header-cal d-flex align-items-center justify-content-center"><span>${new Intl.DateTimeFormat('it-IT', {month: 'short'}).format(date)}</span></div>
+         <div class="corpo-cal d-flex flex-column align-items-center justify-content-center"><span>${new Intl.DateTimeFormat('it-IT', {day: 'numeric'}).format(date)}</span></div>
+       </div>
+       <span class="text-center ora">${new Intl.DateTimeFormat('it-IT', {hour: '2-digit', minute: '2-digit'}).format(date)}</span>
+     </div>
+     <div class="col-9">
+       <a href="#"><h2>${item.title}</h2></a>
+       <h3>${item.place}</h3>
+     </div>
+    </div>
+    <div class="d-flex flex-column">
+      <p>${item.content}</p>
+      <div class="tag-list">${item.tags.map(printTagArticle).join('')}</div>
+    </div>
+   </div>
+   `
   });
 
   element.insertAdjacentHTML('beforeend', articles.join(''));
@@ -126,54 +177,67 @@ const toggleTagOnFilter = (tag, element) => {
 
 const articlesContainer = document.getElementById('eventi');
 const mainArticleContainer = document.getElementById('evento-contenuto');
-const tagFilterContainer = document.getElementById('tag-filter');
-const filterButton = document.getElementById('filter');
-const filterCancelButton = document.getElementById('filter-cancel');
+const tagFilterContainers = document.getElementsByClassName('tag-filter');
+const filterButtons = document.getElementsByClassName('filter');
+const filterCancelButtons = document.getElementsByClassName('filter-cancel');
 const eventsListContainer = document.getElementById('lista-eventi');
+const nextEvent = document.getElementById('prossimo-evento')
 
 const [head, ...rest] = data;
-printMainArticle(head, mainArticleContainer);
+printMainArticle(head, nextEvent);
 printListHTML(rest, articlesContainer);
-printTagList(data, tagFilterContainer);
+printTagList(data, tagFilterContainers[0]);
+printTagList(data, tagFilterContainers[1]);
 
-filterButton.addEventListener('click', () => {
-  const { startDate, endDate } = eventCalendar.state;
+filterButtons[0].addEventListener('click', () => {
+  const { startDate, endDate } = eventCalendarM.state;
 
   filter.date = [startDate, endDate];
   const filteredList = filterList(data, filter);
-  eventsListContainer.innerHTML=`
-  <h1>Eventi filtrati</h1>`;
-  printListHTML(filteredList, eventsListContainer);
+  nextEvent.classList.add('invisibile');
+  articlesContainer.innerHTML=`
+    <h1>Eventi filtrati</h1>`;
+    $("#filtri-mobile").collapse('toggle');
+  printListHTML(filteredList, articlesContainer);
+});
+filterButtons[1].addEventListener('click', () => {
+  const { startDate, endDate } = eventCalendarD.state;
+  filter.date = [startDate, endDate];
+  const filteredList = filterList(data, filter);
+  nextEvent.classList.add('invisibile');
+  articlesContainer.classList.remove('m-top-l');
+  articlesContainer.innerHTML=`
+    <h1>Eventi filtrati</h1>`;
+  printListHTML(filteredList, articlesContainer);
 });
 
-filterCancelButton.addEventListener('click', () => {
+filterCancelButtons[0].addEventListener('click', () => {
   filter = {tags: [], date: [] };
-  eventsListContainer.innerHTML=`
-  <div id="prossimo-evento p-top-l">
-    <h1>Il prossimo evento</h1>
-    <p class="m-top-s">I nostri incontri sono un momento di confronto, ascolto e discussione su tematiche
-      e proposte di Cohousing.</p>
-    <p>Sia che tu voglia proporre uno spazio, un’idea o semplicemente informarti
-      sull’argomento, sei il benvenuto!</p>
-    <p>Non perderti il nostro prossimo incontro, sarà l’occasione giusta anche per
-      conoscersi! </p>
-    <div class="evento-principale m-top-l">
-      <img class="d-none d-lg-block" src="immagini/vieni/immagine.jpg" alt="immagine evento the">
-      <div id="evento-contenuto" class="d-flex align-items-center">
-      </div>
-    </div>
-  </div>
-  <div id="eventi" class=" m-top-l">
-    <h1>Eventi in programma</h1>
-  </div>`;
+  nextEvent.classList.remove('invisibile');
+  articlesContainer.innerHTML=`
+    <h1>Eventi in programma</h1>`;
   const [head, ...rest] = data;
-  const articlesContainer = document.getElementById('eventi');
-  const mainArticleContainer = document.getElementById('evento-contenuto');
+  $("#filtri-mobile").collapse('toggle');
+  eventCalendarM.setState({startDate: null, endDate: null});
 
-  eventCalendar.setState({startDate: null, endDate: null});
-
-  printMainArticle(head, mainArticleContainer);
   printListHTML(rest, articlesContainer);
-  printTagList(data, tagFilterContainer);
+  printTagList(data, tagFilterContainers[0]);
+
+});
+filterCancelButtons[1].addEventListener('click', () => {
+  filter = {tags: [], date: [] };
+  nextEvent.classList.remove('invisibile');
+  articlesContainer.classList.add('m-top-l');
+  articlesContainer.innerHTML=`
+    <h1>Eventi in programma</h1>`;
+  const [head, ...rest] = data;
+//  const articlesContainer = document.getElementById('eventi');
+//  const mainArticleContainer = document.getElementById('evento-contenuto');
+
+  eventCalendarD.setState({startDate: null, endDate: null});
+
+  //printMainArticle(head, mainArticleContainer);
+  printListHTML(rest, articlesContainer);
+  printTagList(data, tagFilterContainers[1]);
 
 });

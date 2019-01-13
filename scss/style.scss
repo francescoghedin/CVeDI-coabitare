@@ -12,7 +12,7 @@ html{
     font-size: 78%;
   }
   @media (min-width: 992px){
-    font-size: 82%;
+    font-size: 62.5%;
 
   }
   @media (min-width: 1200px){
@@ -33,7 +33,7 @@ html{
   @media (min-width: 1200px) {
       min-width: 1297px; }
 }
-//definisco spacing universali
+//definisco spacing universafli
 .m-top-s{
   margin-top: 2.5rem !important;
 }
@@ -491,10 +491,10 @@ input[type=text], input[type=email]{
 .evento-principale{
   border-radius: $radius;
   background-color: $grigio;
-  height: 400px;
+  height: 31rem;
 }
 .evento-principale img{
-  height: 50%;
+  width:100%;
   object-fit: contain;
   border-radius: $radius $radius 0 0;
 
@@ -502,27 +502,38 @@ input[type=text], input[type=email]{
 .evento-principale .tag{
   border: 1px solid $blu;
 }
-.evento-principale .corpo-cal{
-    background-color: white;
+#contenuto-principale .corpo-cal{
+    background-color: white !important;
 }
-#evento-contenuto{
+#contenuto-principale{
   height: 50%;
+  border-radius: $radius;
 }
 .tag {
-  padding: 5px;
+  padding: 0.7rem;
   margin-right: 5px;
   background: $grigio;
+  border-radius: $radius;
+
 
   a, a:hover {
     color: $arancione;
   }
 }
-
-.tag:hover, .active{
+#accordion-mobile{
+  background-color: lighten($grigio, 60%);
+  border: 1px solid $blu;
+  border-radius: $radius;
+  padding: 5px;
+}
+.tag:hover{
+  background-color: lighten($blu, 10%);
+}
+.active{
   background-color: $blu;
 }
 
-#tag-filter .tag{
+.tag-filter .tag{
   margin: 0.5rem;
   display: inline-block;
 }
@@ -546,10 +557,17 @@ input[type=text], input[type=email]{
 }
 .cal,{
   height: 8.2rem;
+  width: 6.5rem;
   font-weight: 900;
   font-family: 'Poppins', sans-serif;
   border-radius: $radius;
   border: 1px solid $blu;
+}
+.cal-mobile{
+  width:100%;
+}
+.cal-mobile .cal{
+  height: 6.8rem;
 }
 .ora{
   font-weight: 400;
@@ -557,13 +575,28 @@ input[type=text], input[type=email]{
   font-size: 2.1rem;
   color: $rosso;
 }
+.cal-mobile .ora{
+  font-size: 1.6rem;
+}
 .filter-panel .btn:first-child{
   margin-bottom: 1rem;
 }
+.invisibile{
+  display: none;
+}
+.card{
+  border: none;
+}
 //calendario
 .calendar {
-  width: 30.2rem;
-  padding: 5px;
+  width: 24.8rem;
+  @media (min-width: 992px){
+    width: 30.2rem;
+    padding: 5px;
+  }
+.fondo{
+  float: right;
+}
   // box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.4);
   border: 1px solid $grigio;
   border-radius: $radius;
@@ -574,7 +607,7 @@ input[type=text], input[type=email]{
     margin: -10px -15px 5px;
     background-color: $rosso;
     color: #fff;
-    height: 4.5rem;
+    height: 5rem;
     position: relative;
 
     a {
