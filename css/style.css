@@ -6778,7 +6778,8 @@ input[type=text], input[type=email] {
   padding: 0.7rem;
   margin-right: 5px;
   background: #e0dee3;
-  border-radius: 15px; }
+  border-radius: 15px;
+  border: 1px solid #373f51; }
   .tag a, .tag a:hover {
     color: #ff975a; }
 
@@ -6838,6 +6839,24 @@ input[type=text], input[type=email] {
 
 .cal-mobile .ora {
   font-size: 1.6rem; }
+
+.side-evento .cal {
+  height: 18rem;
+  width: 17rem; }
+
+.side-evento .header-cal {
+  height: 6rem;
+  font-size: 4.3rem; }
+
+.side-evento .corpo-cal span:first-child {
+  font-size: 5.8rem;
+  margin-top: 0; }
+
+.side-evento .corpo-cal {
+  font-size: 2.5rem; }
+
+.side-evento .ora {
+  font-size: 3.6rem; }
 
 .filter-panel .btn:first-child {
   margin-bottom: 1rem; }
