@@ -6775,11 +6775,14 @@ input[type=text], input[type=email] {
   border-radius: 15px; }
 
 .tag {
+  display: inline-block;
+  height: 3rem;
   padding: 0.7rem;
   margin-right: 5px;
   background: #e0dee3;
   border-radius: 15px;
-  border: 1px solid #373f51; }
+  border: 1px solid #373f51;
+  line-height: normal; }
   .tag a, .tag a:hover {
     color: #ff975a; }
 

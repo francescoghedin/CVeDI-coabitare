@@ -3,6 +3,7 @@ const data = [{
   place: "Via baltea 3, Torino",
   date: "2019-01-29T19:00",
   content: "Un incontro conviviale per discutere liberamente sui diversi modi di abitare in città, come consumare meno energia, tempo libero e lavoro.",
+  link:"evento-chiacchiere.html",
   tags: ["Cohousing", "Chiacchiere"]
 },
 {
@@ -10,6 +11,7 @@ const data = [{
   place: "Via baltea 3, Torino",
   date: "2019-02-04T18:30",
   content: "Vieni a scoprire il nostro nuovissimo progetto di cohousing nella zona di Moncalieri.",
+  link:"evento-chiacchere.html",
   tags: ["Cohousing", "Presentazioni"]
 },
 {
@@ -17,6 +19,7 @@ const data = [{
   place: "Via baltea 3, Torino",
   date: "2019-02-07T14:30",
   content: "Sostenibilità, qualità della vita e banca del tempo, confrontiamoci insieme.",
+  link:"evento-chiacchere.html",
   tags: ["Sostenibilità", "Presentazioni"]
 },
 {
@@ -24,13 +27,15 @@ const data = [{
   place: "Comune di Vidracco",
   date: "2019-02-20T10:30",
   content: "Conoscere, confrontare e trovare ispirazione tra chi ha scelto uno stile di vita ecologico.",
+  link:"evento-chiacchere.html",
   tags: ["Cohousing", "Raduni"]
 },
  {
    title: "Festa dei vicini",
    place: "Piazza della Repubblica, Torino",
-   date: "2019-03-06T19:30",
+   date: "2019-04-06T19:30",
    content: "Ceniamo insieme? Vieni a mangiare con i tuoi amici e vicini di casa di Porta Palazzo.",
+   link:"evento-chiacchere.html",
    tags: ["Festa"]
 }];
 
@@ -51,7 +56,7 @@ const printMainArticle = (item, element) => {
             <span class="text-center ora">${new Intl.DateTimeFormat('it-IT', {hour: '2-digit', minute: '2-digit'}).format(date)}</span>
           </div>
           <div class="col-10">
-            <a href="#"><h2>${item.title}</h2></a>
+            <a href="${item.link}"><h2>${item.title}</h2></a>
             <h3>${item.place}</h3>
             <p>${item.content}</p>
             <div class="tag-list">${item.tags.map(printTagArticle).join('')}</div>
@@ -73,7 +78,7 @@ const printMainArticle = (item, element) => {
         <span class="text-center ora">${new Intl.DateTimeFormat('it-IT', {hour: '2-digit', minute: '2-digit'}).format(date)}</span>
       </div>
       <div class="col-9">
-        <a href="#"><h2>${item.title}</h2></a>
+        <a href="${item.link}"><h2>${item.title}</h2></a>
         <h3>${item.place}</h3>
       </div>
      </div>
@@ -101,7 +106,7 @@ const printListHTML = (list, element) => {
        <span class="text-center ora">${new Intl.DateTimeFormat('it-IT', {hour: '2-digit', minute: '2-digit'}).format(date)}</span>
      </div>
      <div class="col-10">
-       <a href="#"><h2>${item.title}</h2></a>
+       <a href="${item.link}"><h2>${item.title}</h2></a>
        <h3>${item.place}</h3>
        <p>${item.content}</p>
        <div class="tag-list">${item.tags.map(printTagArticle).join('')}</div>
@@ -118,7 +123,7 @@ const printListHTML = (list, element) => {
        <span class="text-center ora">${new Intl.DateTimeFormat('it-IT', {hour: '2-digit', minute: '2-digit'}).format(date)}</span>
      </div>
      <div class="col-9">
-       <a href="#"><h2>${item.title}</h2></a>
+       <a href="${item.link}"><h2>${item.title}</h2></a>
        <h3>${item.place}</h3>
      </div>
     </div>
@@ -135,33 +140,42 @@ const printListHTML = (list, element) => {
 
 const printTagArticle = (tag) => {
   return `
-    <span class="tag">
-      <a href="#">${tag}</a>
-    </span>`
+    <div class="tag">
+      <a href="#" onClick="filterSingleTag('${tag}', this)">${tag}</a>
+    </div>`
 }
 const printTagItem = (tag) => {
  return `
-  <span class="tag">
+  <div class="tag">
     <a href="javascript:;" onClick="toggleTagOnFilter('${tag}', this)">${tag}</a>
-  </span>`
+  </div>`
+}
+const filterSingleTag = (tag, element)=> {
+  filter.tags.push(tag);
+  const filteredList = filterList(data, filter);
+  nextEvent.classList.add('invisibile');
+  articlesContainer.classList.remove('m-top-l');
+  articlesContainer.innerHTML=`
+    <h1>Tag: ${tag}</h1>`;
+  printListHTML(filteredList, articlesContainer);
 }
 
 const filterList = (list, filters) => {
   const [startDate, endDate] = filters.date;
-
-  startDate.hour(1);
-  startDate.minute(0);
-  startDate.second(0);
-  startDate.millisecond(0);
-  endDate.hour(23);
-  endDate.minute(59);
-  endDate.second(59);
-  endDate.millisecond(999);
-    console.log(startDate, endDate );
+  if(startDate!=null){
+    startDate.hour(1);
+    startDate.minute(0);
+    startDate.second(0);
+    startDate.millisecond(0);
+    endDate.hour(23);
+    endDate.minute(59);
+    endDate.second(59);
+    endDate.millisecond(999);
+  }
   const matchesFilterDates = (date) => startDate && endDate ? moment(date).isBetween(startDate, endDate, null, '[]') : true
   const matchesFilterTags =(item) => item.tags.some(articleTag => filters.tags.includes(articleTag))
 
-  return list.filter(item => matchesFilterTags(item)  || matchesFilterDates(item.date))
+  return list.filter(item => matchesFilterTags(item)  && matchesFilterDates(item.date))
 }
 
 const printTagList = (list, element) => {
@@ -184,6 +198,7 @@ const toggleTagOnFilter = (tag, element) => {
     parent.classList.add('active');
   }
 }
+
 
 const articlesContainer = document.getElementById('eventi');
 const mainArticleContainer = document.getElementById('evento-contenuto');
@@ -216,7 +231,6 @@ filterButtons[1].addEventListener('click', () => {
   filter.date = [startDate, endDate];
 
   const filteredList = filterList(data, filter);
-  console.log(filteredList);
   nextEvent.classList.add('invisibile');
   articlesContainer.classList.remove('m-top-l');
   articlesContainer.innerHTML=`

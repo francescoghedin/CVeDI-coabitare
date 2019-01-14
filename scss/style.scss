@@ -510,12 +510,14 @@ input[type=text], input[type=email]{
   border-radius: $radius;
 }
 .tag {
+  display: inline-block;
+  height: 3rem;
   padding: 0.7rem;
   margin-right: 5px;
   background: $grigio;
   border-radius: $radius;
   border: 1px solid $blu;
-
+  line-height: normal;
 
   a, a:hover {
     color: $arancione;
