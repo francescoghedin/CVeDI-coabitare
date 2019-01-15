@@ -1,5 +1,5 @@
 const data = [{
-  title: "Chiacchere da bar",
+  title: "Chiacchiere da bar",
   place: "Via baltea 3, Torino",
   date: "2019-01-29T19:00",
   content: "Un incontro conviviale per discutere liberamente sui diversi modi di abitare in città, come consumare meno energia, tempo libero e lavoro.",
@@ -11,7 +11,7 @@ const data = [{
   place: "Via baltea 3, Torino",
   date: "2019-02-04T18:30",
   content: "Vieni a scoprire il nostro nuovissimo progetto di cohousing nella zona di Moncalieri.",
-  link:"evento-chiacchere.html",
+  link:"evento-spazioverde.html",
   tags: ["Cohousing", "Presentazioni"]
 },
 {
@@ -19,7 +19,7 @@ const data = [{
   place: "Via baltea 3, Torino",
   date: "2019-02-07T14:30",
   content: "Sostenibilità, qualità della vita e banca del tempo, confrontiamoci insieme.",
-  link:"evento-chiacchere.html",
+  link:"evento-viveredifferente.html",
   tags: ["Sostenibilità", "Presentazioni"]
 },
 {
@@ -27,7 +27,7 @@ const data = [{
   place: "Comune di Vidracco",
   date: "2019-02-20T10:30",
   content: "Conoscere, confrontare e trovare ispirazione tra chi ha scelto uno stile di vita ecologico.",
-  link:"evento-chiacchere.html",
+  link:"evento-raduno.html",
   tags: ["Cohousing", "Raduni"]
 },
  {
@@ -35,7 +35,7 @@ const data = [{
    place: "Piazza della Repubblica, Torino",
    date: "2019-04-06T19:30",
    content: "Ceniamo insieme? Vieni a mangiare con i tuoi amici e vicini di casa di Porta Palazzo.",
-   link:"evento-chiacchere.html",
+   link:"evento-festa.html",
    tags: ["Festa"]
 }];
 
