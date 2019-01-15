@@ -6640,12 +6640,12 @@ a:hover {
   margin-left: 0.5rem;
   color: #a91124; }
 
-label[for="inputconsenso"], label[for="inputconsenso-msg"] {
+label[for="inputconsenso-nl"], label[for="inputconsenso-msg"] {
   font-size: 1.2rem;
   font-family: 'Fira Sans', sans-serif;
   margin-left: 0.5rem; }
 
-label[for="inputconsenso"] {
+label[for="inputconsenso-nl"] {
   margin-top: -3px;
   margin-left: 3.5rem; }
 
