@@ -6475,6 +6475,12 @@ a:hover {
   color: #a91124;
   text-decoration: none; }
 
+.btn-primary a {
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal; }
+
 .btn-primary {
   background-color: #ff975a;
   border-radius: 15px;
@@ -6504,18 +6510,22 @@ a:hover {
 .show > .btn-primary.dropdown-toggle {
   background-color: #ff776b;
   box-shadow: 0 6px 0px -2px #ff4838;
-  border-color: none; }
+  border: none; }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 6px 0px -2px #ff4838; }
+
+.btn-secondary a {
+  color: #a91124;
+  font-size: 1.2rem; }
 
 .btn-secondary {
   background-color: white;
   border-radius: 15px;
   border: 3px solid #a91124;
   height: 3.5rem;
-  min-width: 17rem;
+  width: 17rem;
   color: #a91124;
   font-family: 'Fira sans', sans-serif;
   font-size: 1.2rem;
@@ -6530,6 +6540,9 @@ a:hover {
   border: 3px solid #ff975a;
   color: #ff975a;
   background-color: white; }
+
+.btn-secondary:hover a {
+  color: #ff975a; }
 
 .btn-secondary:active {
   border: 3px solid #373f51;
@@ -6607,7 +6620,7 @@ a:hover {
 
 .partecipa::after, .storia::after {
   content: '';
-  border-bottom: 0.5rem solid #e0dee3;
+  border-bottom: 0.2rem solid #e0dee3;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -6635,7 +6648,7 @@ a:hover {
 #inputconsenso-nl {
   margin-left: 1.5rem; }
 
-.obbligatorio h3::after, .obbligatorio p::after {
+.obbligatorio::after {
   content: '*';
   margin-left: 0.5rem;
   color: #a91124; }

@@ -183,6 +183,12 @@ a:hover{
 
 }
 // stili bottoni
+.btn-primary a{
+  color: white;
+  font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
 .btn-primary{
   background-color: $arancione;
   border-radius: $radius;
@@ -213,18 +219,22 @@ a:hover{
 .show > .btn-primary.dropdown-toggle {
   background-color: $corallo;
   box-shadow: 0 6px 0px -2px darken($corallo, 10%);
-  border-color: none; }
+  border: none; }
   .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
   .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 6px 0px -2px darken($corallo, 10%);}
 
+.btn-secondary a{
+  color: $rosso;
+  font-size: 1.2rem;
+}
 
   .btn-secondary{
     background-color: white;
     border-radius: $radius;
     border: 3px solid $rosso;
     height: 3.5rem;
-    min-width: 17rem;
+    width: 17rem;
     color: $rosso;
     font-family: 'Fira sans', sans-serif;
     font-size: 1.2rem;
@@ -241,19 +251,22 @@ a:hover{
     color: $arancione;
     background-color: white;
   }
+  .btn-secondary:hover a{
+    color: $arancione;
+  }
   .btn-secondary:active{
     border: 3px solid $blu;
     color: $blu;
     background-color: white;
   }
   .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
-  .show > .btn-secondary.dropdown-toggle {
+  .show > .btn-secondary.dropdown-toggle, {
     border: none;
     color: white;
     background-color: $orange;
     box-shadow: none; }
     .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-secondary.dropdown-toggle:focus {
+    .show > .btn-secondary.dropdown-toggle:focus,  {
       border: none;
       color: white;
       background-color: $orange;
@@ -325,7 +338,7 @@ a:hover{
 
 .partecipa::after, .storia::after {
   content: '';
-  border-bottom: 0.5rem solid $grigio;
+  border-bottom: 0.2rem solid $grigio;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -358,7 +371,7 @@ a:hover{
 #inputconsenso-nl{
   margin-left: 1.5rem;
 }
-.obbligatorio h3::after, .obbligatorio p::after {
+.obbligatorio::after{
   content: '*';
   margin-left: 0.5rem;
   color: $rosso;
