@@ -45,7 +45,7 @@ const printMainArticle = (item, element) => {
   const date = new Date(item.date)
   const code = `
   <div id="evento-contenuto" class="evento-principale m-top-l d-none d-md-block">
-      <img src="immagini/vieni/immagine.jpg" alt="immagine evento tè">
+      <img src="immagini/incontri/immagine.jpg" alt="immagine evento tè">
       <div id="contenuto-principale" class="d-flex align-items-center">
         <div class="col-2 d-flex flex-column justify-content-center">
             <div class="cal">

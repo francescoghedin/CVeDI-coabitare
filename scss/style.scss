@@ -175,7 +175,7 @@ a{
   font-family: 'Fira Sans', sans-serif;
   font-weight: bold;
   transition: color 0.2s ease-in-out;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 a:hover{
   color: $rosso;
@@ -347,27 +347,7 @@ a:hover{
   width: 100%;
   height: 100%;
 }
-// input[type="text"], input[type="mail"], input[type="textarea"]{
-//   height: 3.5rem;
-//   border-radius: $radius;
-//   @media (min-width: 992px) {
-//     border-radius: 15px 0 0 15px;
-//   }
-// }
-// #inputnome{
-//   height: 3.5rem;
-//   border-radius: $radius;
-//   @media (min-width: 992px) {
-//     border-radius: 15px 0 0 15px;
-//   }
-// }
-// #inputmail{
-//   height: 3.5rem;
-//   border-radius: $radius;
-//   @media (min-width: 992px) {
-//         border-radius: 0 15px 15px 0;
-//   }
-// }
+
 #newsletter .form-group{
   margin-bottom: 1.5rem;
   @media (min-width: 992px) {
@@ -424,6 +404,16 @@ input::placeholder{
 #privacy{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+#privacy a, #privacy a:hover{
+  font-weight: normal;
+  color: $blu;
+  text-decoration: underline;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-left: 5px;
+  margin-right: 5px;
+
 }
 //PAGINA UNISCITI A NOI
 .header-interno{
