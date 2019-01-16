@@ -183,12 +183,7 @@ a:hover{
 
 }
 // stili bottoni
-.btn-primary a{
-  color: white;
-  font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
-}
+
 .btn-primary{
   background-color: $arancione;
   border-radius: $radius;
@@ -224,10 +219,6 @@ a:hover{
   .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 6px 0px -2px darken($corallo, 10%);}
 
-.btn-secondary a{
-  color: $rosso;
-  font-size: 1.2rem;
-}
 
   .btn-secondary{
     background-color: white;
@@ -250,9 +241,6 @@ a:hover{
     border: 3px solid $arancione;
     color: $arancione;
     background-color: white;
-  }
-  .btn-secondary:hover a{
-    color: $arancione;
   }
   .btn-secondary:active{
     border: 3px solid $blu;

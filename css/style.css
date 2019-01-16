@@ -6475,12 +6475,6 @@ a:hover {
   color: #a91124;
   text-decoration: none; }
 
-.btn-primary a {
-  color: white;
-  font-size: 1.2rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: normal; }
-
 .btn-primary {
   background-color: #ff975a;
   border-radius: 15px;
@@ -6516,10 +6510,6 @@ a:hover {
 .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 6px 0px -2px #ff4838; }
 
-.btn-secondary a {
-  color: #a91124;
-  font-size: 1.2rem; }
-
 .btn-secondary {
   background-color: white;
   border-radius: 15px;
@@ -6540,9 +6530,6 @@ a:hover {
   border: 3px solid #ff975a;
   color: #ff975a;
   background-color: white; }
-
-.btn-secondary:hover a {
-  color: #ff975a; }
 
 .btn-secondary:active {
   border: 3px solid #373f51;
