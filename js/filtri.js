@@ -36,7 +36,7 @@ const data = [{
    date: "2019-04-06T19:30",
    content: "Ceniamo insieme? Vieni a mangiare con i tuoi amici e vicini di casa di Porta Palazzo.",
    link:"evento-festa.html",
-   tags: ["Festa"]
+   tags: ["Feste"]
 }];
 
 let filter = { tags: [], date: [] };
@@ -151,7 +151,7 @@ const printTagItem = (tag) => {
   </div>`
 }
 const filterSingleTag = (tag, element)=> {
-  filter.tags.push(tag);
+  filter.tags=[tag];
   const filteredList = filterList(data, filter);
   nextEvent.classList.add('invisibile');
   articlesContainer.classList.remove('m-top-l');
@@ -162,6 +162,8 @@ const filterSingleTag = (tag, element)=> {
 
 const filterList = (list, filters) => {
   const [startDate, endDate] = filters.date;
+  console.log(startDate, endDate);
+  console.log(filters.tags);
   if(startDate!=null){
     startDate.hour(1);
     startDate.minute(0);
@@ -174,13 +176,18 @@ const filterList = (list, filters) => {
   }
   const matchesFilterDates = (date) => startDate && endDate ? moment(date).isBetween(startDate, endDate, null, '[]') : true
   const matchesFilterTags =(item) => item.tags.some(articleTag => filters.tags.includes(articleTag))
+  if(filter.date==null || filters.tags.length == 0){
+    return list.filter(item => matchesFilterTags(item) || matchesFilterDates(item.date))
+  }else{
+    return list.filter(item => matchesFilterTags(item) && matchesFilterDates(item.date))
+  }
+//  return list.filter(item => matchesFilterTags(item) || matchesFilterDates(item.date))
 
-  return list.filter(item => matchesFilterTags(item)  && matchesFilterDates(item.date))
 }
 
 const printTagList = (list, element) => {
   const allTags = list.reduce((acc, item) => acc = acc.concat(item.tags), []);
-  allTags.push("Workshop", "Progetti");
+  allTags.push("Workshop");
   const allUniqueTags = allTags.filter((value, index, all) => all.indexOf(value) === index);
 
   element.innerHTML = `
@@ -229,8 +236,9 @@ filterButtons[0].addEventListener('click', () => {
 filterButtons[1].addEventListener('click', () => {
   const { startDate, endDate } = eventCalendarD.state;
   filter.date = [startDate, endDate];
-
+//  console.log(startDate, endDate);
   const filteredList = filterList(data, filter);
+  //console.log(filteredList)
   nextEvent.classList.add('invisibile');
   articlesContainer.classList.remove('m-top-l');
   articlesContainer.innerHTML=`

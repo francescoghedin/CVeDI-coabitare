@@ -24,7 +24,8 @@ var Heading = function Heading(_ref) {
       { onClick: function onClick() {
           return resetDate();
         } },
-      date.format('MMMM'),
+        Intl.DateTimeFormat('it-IT', {month: 'long'}).format(date),
+    //  date.format('MMMM'),
       ' ',
       React.createElement(
         'small',
@@ -99,10 +100,10 @@ var Days = function Days(_ref3) {
     labels.push(React.createElement(
       'span',
       { className: 'label' },
-      moment().day(i).format('ddd')
+      Intl.DateTimeFormat('it-IT', {weekday: 'short'}).format(moment().day(i))
+  //    moment().day(i).format('ddd')
     ));
   }
-
   for (var i = firstDayDate.day(); i > 1; i--) {
     previousMonth.date(previousMonthDays - i + 2);
 
